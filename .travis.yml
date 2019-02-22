@@ -19,8 +19,8 @@ filter_secrets: false
 
 matrix:
   include:
-  - os: linux
-    env: NODE_VERSION="8.15.0"
+  # - os: linux
+  #   env: NODE_VERSION="8.15.0"
 #   - os: linux
 #     env: NODE_VERSION="10.15.0"
 #   - os: linux
@@ -49,9 +49,9 @@ matrix:
 #     env: NODE_ARCH="32" NODE_VERSION="8.15.0" npm_config_runtime="electron" npm_config_target="2.0.6" npm_config_disturl="https://atom.io/download/electron"
 #   - os: windows
 #     env: NODE_ARCH="32" NODE_VERSION="10.15.0" npm_config_runtime="electron" npm_config_target="4.0.1" npm_config_disturl="https://atom.io/download/electron"
-#   - os: osx
-#     osx_image: xcode10.1
-#     env: NODE_VERSION="8.15.0"
+  - os: osx
+    osx_image: xcode10.1
+    env: NODE_VERSION="8.15.0"
 #   - os: osx
 #     osx_image: xcode10.1
 #     env: NODE_VERSION="10.15.0"
@@ -107,7 +107,8 @@ matrix:
 #     ./b2 cxxflags=-fPIC cflags=-fPIC address-model=${NODE_ARCH} variant=release link=static --with-thread --with-system --with-regex --with-date_time --with-chrono
 #   fi
 
-# script:
+script:
+  - echo "Test jenkins"
 # - npm install
 # - npm run package-prebuilt
 # - echo tag=$TRAVIS_TAG pullrequest=$TRAVIS_PULL_REQUEST
