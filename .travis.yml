@@ -3,9 +3,9 @@ branches:
     - master
     - /^v?[0-9]/
 
-# language: cpp
+language: cpp
 
-# filter_secrets: false
+filter_secrets: false
 
 # addons:
 #   apt:
@@ -17,10 +17,10 @@ branches:
 # env:
 #   global: NODE_ARCH="64"
 
-# matrix:
-#   include:
-#   - os: linux
-#     env: NODE_VERSION="8.15.0"
+matrix:
+  include:
+  - os: linux
+    env: NODE_VERSION="8.15.0"
 #   - os: linux
 #     env: NODE_VERSION="10.15.0"
 #   - os: linux
